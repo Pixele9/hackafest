@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script defer src="../js/bootstrap.min.js"></script>
+    <script defer src="../js/jquery-3.4.1.min.js"></script>
+    <script defer src="../js/popper.min.js"></script>
+    <title>Responsive utilities</title>
+</head>
+<style>
+    .columna{
+        background: #2191FB;
+        color: #FFF;
+        padding:20px;
+        margin-bottom: 20px;
+    }
+</style>
+<!-- Las clases de display nos permiten "esconder" o poner hide elemntos, dependiendo del 
+    del tamaño de la pantalla, la sintansix solo es d- seguido del tamaño /sm- md- lg- xl
+    y podemos jugar con  flex / block / none -->
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="columna col d-block d-sm-none"><p>XS - Extra Small</p></div>
+            <div class="columna col d-none d-sm-block d-md-none"><p>SM - Small</p></div>
+            <div class="columna col d-none d-md-block d-lg-none"><P>MD- Medium</P></div>
+            <div class="columna col d-none d-lg-block d-xl-none"><P>LG- Grande</P></div>
+            <div class="columna col d-none d-xl-block"><P>XL- Extra Grande</P></div>
+        </div>
+    </div>
+</body>
+</html>

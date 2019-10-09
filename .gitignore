@@ -1,2 +1,6 @@
 
 banco/Apps/analisis/migrations/
+
+*.pyc
+
+banco/banco/settings.py
