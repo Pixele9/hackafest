@@ -9,6 +9,7 @@
     <script defer src="{% static 'public/js/jquery-3.4.1.min.js' %}"></script>
     <script defer src="{% static 'public/js/popper.min.js' %} "></script>
     <script defer src="{% static 'public/js/bootstrap.min.js' %}"></script>
+    <script defer src="{% static 'public/js/funcionesUriel.js' %}"></script>
     <link rel="stylesheet" href="{% static 'public/estilos-login.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <title></title>
@@ -25,15 +26,15 @@
                         </div>
                         <div class="input-container col-12 px-4 py-2">
                             <p class="my-2">Ingresa tu usuario</p>
-                            <input class="input px-2" type="text" placeholder="Usuario">
+                            <input class="input px-2" type="text" placeholder="Usuario" id="user">
                         </div>
                         <div class="input-container col-12 px-4 py-2">
                             <p class="my-2">Ingresa tu contraseña</p>
-                            <input class="input px-2" type="text" placeholder="Ingresa tu contraseña">
+                            <input class="input px-2" type="password" placeholder="Ingresa tu contraseña" id="password">
                         </div>
                         <div class="input-container d-flex col-12 p-5 align-items-center justify-content-center">
                             <div class="login-btn pt-2">
-                                <p class="btn-text">Iniciar Sesión</p>
+                                <p class="btn-text" id="btnIniciarSesion">Iniciar Sesión</p>
                             </div>
                         </div>
                     </div>
