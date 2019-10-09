@@ -1,6 +1,7 @@
 :root{
     --verde:#25b500;
     --verdeDark: #389c1f;
+    --gris:(#F3F3F3);
 }
 html, body{
     height: 100%;
@@ -56,4 +57,75 @@ html, body{
 }
 .login-btn:hover{
     background-color: var(--verdeDark);
+}
+
+/* Estilos de Index */
+.nav-bar{
+    background-color: var(--gris);
+    height: 10%;
+    box-shadow: 1px 5px 8px -6px rgba(0,0,0,.75);
+    z-index: 2;
+}
+.aside{
+    background-color: antiquewhite;
+    height: 100%;
+}
+.row-content{
+    height: 90%;
+}
+.cards-container{
+    height: 100%;
+}
+
+.name{
+ font-weight: bold
+}
+
+.user{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.card{
+    text-align: center;
+    box-shadow: 0px 0px 8px 1px rgba(191,189,191,.5);
+}
+
+.card h2{
+    font-size: 15pt;
+    font-weight: bold;
+}
+.img-card>img{
+    width: 150px;
+    height: 150px;
+}
+.credito{
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.caracteristica{
+    width: 100%;
+    text-align: justify;
+}
+
+.feat-title{
+    font-weight:bold;
+}
+.carac{
+    height: auto;
+}
+.carac img{
+    height: 30px;
+    width: 30px;
+}
+.carac img:hover{
+    height: 35px;
+    width: 35px;
+}
+.carac:hover{ 
+    cursor: pointer;
 }

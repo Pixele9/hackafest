@@ -23,3 +23,5 @@ def loginn(request):
         return render(request, "login-base.html")
     
     
+def index(request):
+    return render(request, "index.html")
