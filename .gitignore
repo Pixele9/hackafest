@@ -1,2 +1,4 @@
 
 banco/Apps/analisis/migrations/
+
+*.pyc
