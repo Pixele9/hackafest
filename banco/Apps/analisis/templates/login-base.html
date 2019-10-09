@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'public/css/bootstrap.min.css' %}">
+    <script defer src="{% static 'public/js/jquery-3.4.1.min.js' %}"></script>
+    <script defer src="{% static 'public/js/popper.min.js' %} "></script>
+    <script defer src="{% static 'public/js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'public/estilos-login.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <title></title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row-main row d-flex flex-row">
+            <div id="d-1" class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-sm-12 d-flex justify-content-center align-items-center">
+                <div class="circle"></div>
+                <div class="card-ingreso col-7 d-flex flex-column align-items-center">
+                    <div class="row">
+                        <div class="col-12 px-4 pt-5 pb-3">
+                            <h1 class="login-title">Iniciar Sesión</h1>
+                        </div>
+                        <div class="input-container col-12 px-4 py-2">
+                            <p class="my-2">Ingresa tu usuario</p>
+                            <input class="input px-2" type="text" placeholder="Usuario">
+                        </div>
+                        <div class="input-container col-12 px-4 py-2">
+                            <p class="my-2">Ingresa tu contraseña</p>
+                            <input class="input px-2" type="text" placeholder="Ingresa tu contraseña">
+                        </div>
+                        <div class="input-container d-flex col-12 p-5 align-items-center justify-content-center">
+                            <div class="login-btn pt-2">
+                                <p class="btn-text">Iniciar Sesión</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="d-2" class=" d-none d-md-flex col-md-6 col-lg-6 col-xl-6 p-0 ">
+                <img id="img-login" src="{% static 'public/img/img-login.jpg' %}" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
