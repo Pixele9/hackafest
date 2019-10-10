@@ -6,11 +6,11 @@
 <div class="row flex-md-row flex-column">
     <form action="">
         <p for="">Municipio</p>
-        <input type="text">
-        <p for="">Tipo de Préstamo</p>
-        <input type="text">
+        <input type="text" id="municipio">
+        <p for="">Mes de Entrega</p>
+        <input type="text" id="mesEntrega">
         <p for="">Edad</p>
-        <input type="number">
+        <input type="number" id="edad">
         <p for="">Género</p>
         <select name="genero" id="genero">
             <option value="M">Masculino</option>
@@ -41,8 +41,8 @@
             <option value="GANADOVACUNODECARNE">Ganado Vacuno de Carne</option>
             <option value="GANADOVACUNODELECHE">Ganado Vacuno de Leche</option>
         </select>
-        <input type="submit" value="Submit">
     </form>
+    <button onclick="getPrediction()">Enviar</button>
 </div>
 </div>
 {% endblock content %}

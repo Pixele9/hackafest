@@ -22,7 +22,8 @@ urlpatterns = [
     path('index/', viewsBanco.index, name="index"),
     path('login/', viewsBanco.loginn, name='login' ),
     path("base/", viewsBanco.base, name="base"),
-    path('prediccion/', viewsBanco.prediccion , name='prediccion'),
+    path("prediccion", viewsBanco.prediccion, name="prediccion"),
+    path('getPrediction', viewsBanco.getPrediction , name='getPrediction'),
     path("socios/", viewsBanco.socios, name="socios")
 
 ]
