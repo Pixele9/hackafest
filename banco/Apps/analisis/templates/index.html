@@ -1,81 +1,124 @@
+{% extends 'base.html' %}
 {%load static%}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static 'public/css/bootstrap.min.css' %}">
-    <script defer src="{% static 'public/js/jquery-3.4.1.min.js' %}"></script>
-    <script defer src="{% static 'public/js/popper.min.js' %} "></script>
-    <script defer src="{% static 'public/js/bootstrap.min.js' %}"></script>
-    <script defer src="{% static 'public/js/indexjs.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'public/estilos-login.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <title>Index</title>
-</head>
-<body>
-    <div class="container-fluid flex-column">
-        <div class="row flex-row nav-bar flex-md-row-reverse align-items-center">
-            <img class="user mr-md-5" src=" {% static 'public/img/man.png' %}" alt="">
-            <p class="name mt-2 mx-2">Miguel Angel Nuñez Perez</p>
-
+{% block seccion %}Perfiles{% endblock seccion %}
+{% block content %}
+<div class="row card-title">
+    <div class="col-12 col-md-4 align-items-center justify-content-center">
+    <!-- Card -->
+    <div class="card d-flex flex-column p-2 my-3">
+        <h2>Perfil | 1</h2>
+        <div class="img-card p-2">
+            <img src="{% static 'public/img/girl.png'%}" alt="" srcset="">
         </div>
-        <div class="row row-content">
-            <div class="aside d-none d-md-flex col-md-2 col-lg-2 col-xl-2 flex-column"></div>
-            <div class="cards-container col-12 col-md-10 col-lg-10 col-xl-10 flex-column overflow-auto">
-                <div class="row card-title">
-                    <div class="col-12 p-4">
-                        <h1>Perfiles | Caja Guadalupe</h1>
-                    </div>
-                         <div class="col-12 col-md-4 align-items-center justify-content-center">
-                            <!-- Card -->
-                            <div class="card d-flex flex-column p-2 my-3">
-                                <h2>Perfil | 1</h2>
-                                <div class="img-card p-2">
-                                    <img src="{% static 'public/img/girl.png'%}" alt="" srcset="">
-                                </div>
-                                <div id="carac" class="carac d-flex flex-row justify-content-center p-2" data-toggle="collapse" data-target="#cred" aria-expanded="false" aria-controls="cred" role="button">
-                                    <img src="{% static 'public/img/menu.png'%}" alt="" srcset="">
-                                </div>
-                                <div id="cred" class="creditos-container collapse">
-                                    <div class="caracteristica">
-                                        <p class="feat-title">Sexo:</p>
-                                        <p>Lorem ipsum</p>
-                                    </div>
-                                    <div class="caracteristica">
-                                        <p class="feat-title">Edad:</p>
-                                        <p>Lorem ipsum</p>
-                                    </div>
-                                    <div class="caracteristica">
-                                        <p class="feat-title">Ocupación:</p>
-                                        <p>Lorem ipsum</p>
-                                    </div>
-                                    <div class="caracteristica">
-                                        <p class="feat-title">Monto:</p>
-                                        <p>Lorem ipsum</p>
-                                    </div>
-                                    <div class="caracteristica">
-                                        <p class="feat-title">Actividad:</p>
-                                        <p>Lorem ipsum</p>
-                                    </div>
-                                    <div class="caracteristica">
-                                        <p class="feat-title">Mes de credito:</p>
-                                        <p>Lorem ipsum</p>
-                                    </div>
-                                    <div class="caracteristica">
-                                        <p class="feat-title">Tipo de credito:</p>
-                                        <p>Lorem ipsum</p>
-                                    </div>
-                                </div>
-                            </div>
-                         </div>
-                </div>
+        <div id="carac" class="carac d-flex flex-row justify-content-center p-2" data-toggle="collapse" data-target="#cred" aria-expanded="false" aria-controls="cred" role="button">
+            <img src="{% static 'public/img/menu.png'%}" alt="" srcset="">
+        </div>
+        <div id="cred" class="creditos-container collapse">
+            <div class="caracteristica">
+                <p class="feat-title">Sexo:</p>
+                <p>Femenino</p>
+            </div>
+            <div class="caracteristica">
+                <p class="feat-title">Edad:</p>
+                <p>30 años</p>
+            </div>
+            <div class="caracteristica">
+                <p class="feat-title">Ocupación:</p>
+                <p>Emplead(a)/p>
+            </div>
+            <div class="caracteristica">
+                <p class="feat-title">Monto:</p>
+                <p>$ 30,000 / año</p>
+            </div>
+            <div class="caracteristica">
+                <p class="feat-title">Mes de credito:</p>
+                <p>Diciembre</p>
+            </div>
+            <div class="caracteristica">
+                <p class="feat-title">Tipo de credito:</p>
+                <p>Vivienda</p>
             </div>
         </div>
     </div>
-</body>
-</html>
-<script>
- 
-</script>
+    </div>
+
+<div class="col-12 col-md-4 align-items-center justify-content-center">
+    <!-- Card -->
+    <div class="card d-flex flex-column p-2 my-3">
+        <h2>Perfil | 2</h2>
+        <div class="img-card p-2">
+            <img src="{% static 'public/img/man.png'%}" alt="" srcset="">
+        </div>
+        <div id="carac" class="carac d-flex flex-row justify-content-center p-2" data-toggle="collapse"
+            data-target="#cred-2" aria-expanded="false" aria-controls="cred" role="button">
+            <img src="{% static 'public/img/menu.png'%}" alt="" srcset="">
+        </div>
+        <div id="cred-2" class="creditos-container collapse">
+            <div class="caracteristica">
+                <p class="feat-title">Sexo:</p>
+                <p>Masculino</p>
+            </div>
+            <div class="caracteristica">
+                <p class="feat-title">Edad:</p>
+                <p>50 años</p>
+            </div>
+            <div class="caracteristica">
+                <p class="feat-title">Ocupación:</p>
+                <p>Agropecuario</p>
+            </div>
+            <div class="caracteristica">
+                <p class="feat-title">Monto:</p>
+                <p>$ 50,000</p>
+            </div>
+            <div class="caracteristica">
+                <p class="feat-title">Mes de credito:</p>
+                <p>Junio</p>
+            </div>
+            <div class="caracteristica">
+                <p class="feat-title">Tipo de credito:</p>
+                <p>Comercial</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-12 col-md-4 align-items-center justify-content-center">
+    <!-- Card -->
+    <div class="card d-flex flex-column p-2 my-3">
+        <h2>Perfil | 3</h2>
+        <div class="img-card p-2">
+            <img src="{% static 'public/img/girl.png'%}" alt="" srcset="">
+        </div>
+        <div id="carac" class="carac d-flex flex-row justify-content-center p-2" data-toggle="collapse"
+            data-target="#cred-3" aria-expanded="false" aria-controls="cred" role="button">
+            <img src="{% static 'public/img/menu.png'%}" alt="" srcset="">
+        </div>
+        <div id="cred-3" class="creditos-container collapse">
+            <div class="caracteristica">
+                <p class="feat-title">Sexo:</p>
+                <p>Femenino</p>
+            </div>
+            <div class="caracteristica">
+                <p class="feat-title">Edad:</p>
+                <p>40 años</p>
+            </div>
+            <div class="caracteristica">
+                <p class="feat-title">Ocupación:</p>
+                <p>Agropecuaria</p>
+            </div>
+            <div class="caracteristica">
+                <p class="feat-title">Monto:</p>
+                <p>$ 60,000</p>
+            </div>
+            <div class="caracteristica">
+                <p class="feat-title">Mes de credito:</p>
+                <p>Octubre</p>
+            </div>
+            <div class="caracteristica">
+                <p class="feat-title">Tipo de credito:</p>
+                <p>Comercial</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

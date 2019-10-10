@@ -24,14 +24,17 @@ html, body{
     height: 110%;
 }
 #d-2{
-    background-color: aqua;
+    background-color: white
 }
 
 #img-login{
+    height: 100% !important;
+    width: 100%;
+}
+.video-login{
     height: 100%;
     width: 100%;
 }
-
 .card-ingreso{
     background-color:white;
     height: 80%;
@@ -66,9 +69,35 @@ html, body{
     box-shadow: 1px 5px 8px -6px rgba(0,0,0,.75);
     z-index: 2;
 }
+.menu-icon, .settings{
+    height: 30px;
+    width: 30px
+}
+
+/* Aside */
 .aside{
-    background-color: antiquewhite;
+    background-color: var(--verde);
     height: 100%;
+}
+
+.aside-carac{
+    height: 70px;
+    color:white;
+    border-bottom: 1px solid white;
+}
+
+.aside-carac img{
+    height: 40px;
+    width: 40px;
+    border-radius:50%,
+}
+
+.aside-carac:hover{
+    height: 80px;
+    cursor:pointer;
+    background-color: white;
+    color: var(--verde);
+    box-shadow: 0px 0px 8px 1px rgba(191,189,191,.8);
 }
 .row-content{
     height: 90%;
@@ -85,11 +114,16 @@ html, body{
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    border-right: 1px solid black);
 }
 
 .card{
     text-align: center;
     box-shadow: 0px 0px 8px 1px rgba(191,189,191,.5);
+}
+
+.card:hover{
+     box-shadow: 0px 0px 15px 1px rgba(191,189,191,1);
 }
 
 .card h2{
@@ -128,4 +162,8 @@ html, body{
 }
 .carac:hover{ 
     cursor: pointer;
+}
+/* Mi perfil estilos */
+.perfil-container{
+    
 }

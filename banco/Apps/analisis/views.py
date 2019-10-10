@@ -25,3 +25,12 @@ def loginn(request):
     
 def index(request):
     return render(request, "index.html")
+
+def prediccion(request):
+    return render(request, "prediccion.html")
+
+def base(request):
+    return render(request, "base.html")
+
+def socios(request):
+    return render(request, "socios.html")
