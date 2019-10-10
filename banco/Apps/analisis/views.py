@@ -45,3 +45,6 @@ def base(request):
 
 def socios(request):
     return render(request, "socios.html")
+
+def miPerfil(request):
+    return render(request, "miPerfil.html")

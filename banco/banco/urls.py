@@ -23,6 +23,6 @@ urlpatterns = [
     path('login/', viewsBanco.loginn, name='login' ),
     path("base/", viewsBanco.base, name="base"),
     path('prediccion/', viewsBanco.prediccion , name='prediccion'),
-    path("socios/", viewsBanco.socios, name="socios")
-
+    path("socios/", viewsBanco.socios, name="socios"),
+    path('miPerfil/', viewsBanco.miPerfil, name="miPerfil")
 ]

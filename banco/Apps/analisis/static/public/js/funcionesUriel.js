@@ -51,3 +51,32 @@ function iniciarSesion()
         alert("Favor de ingresar tus datos");
     }
 }
+
+function getPrediction()
+{
+    let municipio = document.getElementById("municipio").value;
+    let edad = document.getElementById("edad").value;
+    let mesEntrega = document.getElementById("mesEntrega").value;
+    let genero = document.getElementById("genero").value;
+    let ocupacion = document.getElementById("ocupacion").value;
+    let token = getCookie('csrftoken');
+
+    console.log(municipio, edad, mesEntrega, genero, ocupacion);
+
+    if(municipio.length>0 && edad.length>0 && mesEntrega.length>0)
+    {
+        $.ajax({ 
+            type: 'POST',
+            url: '../getPrediction',
+            data: {csrfmiddlewaretoken: token, municipio:municipio, edad:edad, mesEntrega:mesEntrega, genero:genero, ocupacion:ocupacion},
+            success: function(data)
+            {
+                console.log(data);
+            }
+         });
+    }
+    else
+    {
+        alert("Favor de ingresar tus datos");
+    }
+}
