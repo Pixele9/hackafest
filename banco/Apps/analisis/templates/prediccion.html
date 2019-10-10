@@ -1,7 +1,52 @@
 {% extends 'index.html' %}
 {% load static %}
-{% block seccion %}Prediccion de Socios{% endblock seccion %}
+{% block seccion %}Predicción de Socios{% endblock seccion %}
 {% block content %}
-<div class="col-8 offset-2 perfil-container">
+<div class="col-12 d-flex flex-row align-items-center">
+    <img class="img-socios mx-2" src="{% static 'public/img/report.png'%}" alt="">
+    <p class="m-0">¡Recuerda que para poder obtener resultados, debes asegurarte de llenar todos los campos!</p>
+</div>
+<div class="col-12 flex-column py-4">
+
+    <form action="">
+        <p class="m-0" for="">Municipio</p>
+        <input class="input-socio mb-3 px-3" type="text">
+        <p class="m-0" for="">Tipo de Préstamo</p>
+        <input class="input-socio mb-3 px-3" type="text">
+        <p class="m-0" for="">Edad</p>
+        <input class="input-socio mb-3 px-3" type="number">
+        <p class="m-0" for="">Género</p>
+        <select class="mb-3" name="genero" id="genero">
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+        </select>
+        <p class="m-0" for="">Ocupación</p>
+        <select name="ocupacion" id="ocupacion">
+            <option value="AMADECASA">Ama de Casa</option>
+            <option value="COMPRAVENTAARTICULOSDEBONETERIA">Compra Venta de Artículos de Bonetería</option>
+            <option value="COMPRAVENTAARTICULOSDEMERCERIA ">Compra Venta de Artículos de Mercería</option>
+            <option value="COMPRAVENTAARTICULOSPARAREGALO">Compra Venta de Artículos para Regalo</option>
+            <option value="COMPRAVENTADEACCESORIOSPMUJER">Compra Venta de Accesorios para Mujer</option>
+            <option value="COMPRAVENTADEACEITEQUEMADO">Compra Venta de Aceite Quemado</option>
+            <option value="COMPRAVENTADEAUTOMOVILESUSADOS ">Compra Venta de Automóviles Usados</option>
+            <option value="COMPRAVENTADECALZADO">Compra Venta de Calzado</option>
+            <option value="COMPRAVENTADECARNE(CARNICERIA)">Compra Venta de Carne (Carnicería)</option>
+            <option value="COMPRAVENTADECARNEDEAVES">Compra Venta de Carne de Aves</option>
+            <option value="COMPRAVENTADECARNEDERESGANADO">Compra Venta de Carne de Res Ganado</option>
+            <option value="CRIAYEXPLOTACIONDEGANADOOVINO">Cría y Explotación de Ganado Ovino</option>
+            <option value="CRIAYEXPLOTACIONDEPOLLOS">Cría y Explotación de Pollos</option>
+            <option value="CULTIVODECHIA">Cultivo de Chía</option>
+            <option value="CULTIVODEJITOMATE">Cultivo de Jitomate</option>
+            <option value="CULTIVODEMAIZ">Cultivo de Maíz</option>
+            <option value="CULTIVODETOMATE">Cultivo de Tomate</option>
+            <option value="EMPLEADO">Empleado</option>
+            <option value="GANADOCAPRINO">Ganado Caprino</option>
+            <option value="GANADOPORCINO">Ganado Porcino</option>
+            <option value="GANADOVACUNODECARNE">Ganado Vacuno de Carne</option>
+            <option value="GANADOVACUNODELECHE">Ganado Vacuno de Leche</option>
+        </select>
+        <input type="submit" value="Buscar">
+    </form>
+
 </div>
 {% endblock content %}
