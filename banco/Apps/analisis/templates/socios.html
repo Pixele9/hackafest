@@ -1,4 +1,105 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block seccion %}Socios {% endblock seccion %}
-{% block content %}{% endblock content %}
+{% block seccion %}Socios{% endblock seccion %}
+{% block content %}
+<div class="col-12 d-flex flex-row align-items-center">
+    <img class="img-socios mx-2" src="{% static 'public/img/report.png'%}" alt="">
+    <p class="m-0">¡Recuerda que para poder obtener resultados, debes tener el número de socio!</p>
+</div>
+<div class="col-12 flex-column py-4">
+    <p class="p-0">Ingresa el número de socio</p>
+    <div class="d-flex flex-md-row flex-column">
+        <input class="input-socio p-3 mr-md-3 w-75" type="text">
+        <button class="btn-socios my-3 my-md-0" data-toggle="collapse" data-target="#results" aria-expanded="false" aria-controls="results" role="button">Buscar</button>
+    </div>
+    <div  id="results" class="row flex-column flex-md-row collapse">
+        <div class="col-12 my-3">
+            <h2 class="p-0 m-0">Resultados</h2>
+        </div>
+        <div class="col-12 col-md-6 align-items-center justify-content-center">
+            <!-- Card -->
+            <div class="card d-flex flex-column p-2 my-3">
+                <h2>Socio</h2>
+                <div class="img-card p-2">
+                    <img src="{% static 'public/img/girl.png'%}" alt="" srcset="">
+                </div>
+                <div id="carac" class="carac d-flex flex-row justify-content-center p-2" data-toggle="collapse"
+                    data-target="#cred" aria-expanded="false" aria-controls="cred" role="button">
+                    <img src="{% static 'public/img/more.png'%}" alt="" srcset="">
+                </div>
+                <div id="cred" class="creditos-container collapse">
+                    <div class="caracteristica">
+                        <p class="feat-title">Sexo:</p>
+                        <p>Femenino</p>
+                    </div>
+                    <div class="caracteristica">
+                        <p class="feat-title">Edad:</p>
+                        <p>30 años</p>
+                    </div>
+                    <div class="caracteristica">
+                        <p class="feat-title">Ocupación:</p>
+                        <p>Emplead(a)/p>
+                    </div>
+                    <div class="caracteristica">
+                        <p class="feat-title">Monto:</p>
+                        <p>$ 30,000 / año</p>
+                    </div>
+                    <div class="caracteristica">
+                        <p class="feat-title">Mes de credito:</p>
+                        <p>Diciembre</p>
+                    </div>
+                    <div class="caracteristica">
+                        <p class="feat-title">Tipo de credito:</p>
+                        <p>Vivienda</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resultados -->
+        <div class="col-12 col-md-6 align-items-center justify-content-center">
+            <!-- Card -->
+            <div class="card d-flex flex-column p-2 my-3">
+                <h2>Perfil ideal</h2>
+                <div class="img-card p-2">
+                    <img src="{% static 'public/img/girl.png'%}" alt="" srcset="">
+                </div>
+                <div id="carac" class="carac d-flex flex-row justify-content-center p-2" data-toggle="collapse"
+                    data-target="#perfil" aria-expanded="false" aria-controls="cred" role="button">
+                    <img src="{% static 'public/img/more.png'%}" alt="" srcset="">
+                </div>
+                <div id="perfil" class="creditos-container collapse">
+                    <div class="caracteristica">
+                        <p class="feat-title">Perfil:</p>
+                        <p>Perfil</p>
+                    </div>
+                    <div class="caracteristica">
+                        <p class="feat-title">Sexo:</p>
+                        <p>Femenino</p>
+                    </div>
+                    <div class="caracteristica">
+                        <p class="feat-title">Edad:</p>
+                        <p>30 años</p>
+                    </div>
+                    <div class="caracteristica">
+                        <p class="feat-title">Ocupación:</p>
+                        <p>Emplead(a)/p>
+                    </div>
+                    <div class="caracteristica">
+                        <p class="feat-title">Monto:</p>
+                        <p>$ 30,000 / año</p>
+                    </div>
+                    <div class="caracteristica">
+                        <p class="feat-title">Mes de credito:</p>
+                        <p>Diciembre</p>
+                    </div>
+                    <div class="caracteristica">
+                        <p class="feat-title">Tipo de credito:</p>
+                        <p>Vivienda</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -17,13 +17,52 @@
 </head>
 <body>
     <div class="container-fluid flex-column">
-        <div class="row flex-row nav-bar flex-md-row-reverse align-items-center">
-            <img class="settings mx-3 d-md-flex d-none" src="{% static 'public/img/settings.png' %}" alt="">
-            <img class="menu-icon d-flex d-md-none mx-3" src="{% static 'public/img/list.png' %}" alt="">
-            <img class="user offset-2 offset-md-0" src=" {% static 'public/img/man.png' %}" alt="">
-            <p class="name mt-2 mx-2">Miguel Angel Nuñez Perez</p>
-            
+        <!-- 
+         -->
+        <div class="row d-flex nav-bar flex-row align-items-center">
+            <!-- <img class="settings mx-3 d-md-flex d-none" src="{% static 'public/img/settings.png' %}" alt=""> -->
+            <div class="col-4 d-flex d-md-none align-items-center">
+                <img class="menu-icon d-flex d-md-none mx-3" src="{% static 'public/img/list.png' %}"data-toggle="collapse" data-target="#menu" aria-expanded="false" aria-controls="menu" role="button"alt="">
+            </div>
+            <div class=" d-none d-md-flex col-3 pl-5">
+                <h1 class="p-0 m-0">SVPP</h1>
+            </div>
+            <div class="col-md-5 col-5"></div>
+            <div class="col-md-4 col-3 d-flex flex-row justify-content-end align-items-center">
+                <p class="name my-0 mx-2 text-wrap d-none d-md-block">Miguel Ángel Núñez Pérez</p>
+                <a href="{% url 'miPerfil' %}">
+                    <img class="user mr-3" src=" {% static 'public/img/man.png' %}" alt="">    
+                </a>
+            </div>
         </div>
+        <!-- Responsive menu -->
+        <div id="menu" class="aside-movil col-12 flex-column collapse d-md-none">
+            <a href="{% url 'index' %}">
+                <div class="row aside-carac">
+                    <div class="col-12 d-flex flex-row aside-1 justify-content-center align-items-center">
+                        <img src="{% static 'public/img/team.png'%}" alt="">
+                        <p class="mx-2 my-0">Perfiles generados</p>
+                    </div>
+                </div>
+            </a>
+                <a href="{% url 'socios' %}">
+                    <div class="row aside-carac">
+                        <div class=" aside-carac col d-flex flex-row aside-2 justify-content-center align-items-center">
+                            <img src="{% static 'public/img/family.png'%}" alt="">
+                            <p class="mx-2 my-0">Socios de la entidad</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="{% url 'prediccion' %}">
+                    <div class="row aside-carac">
+                        <div class=" aside-carac col d-flex flex-row aside-3 justify-content-center align-items-center">
+                            <img src="{% static 'public/img/diagram.png'%}" alt="">
+                            <p class="mx-2 my-0">Predicción de prospectos</p>
+                        </div>
+                    </div>
+                 </a>
+            </div>
+            <!-- Fin del menu responsive -->
         <div class="row row-content">
             <div class="aside d-none d-md-flex col-md-2 col-lg-2 col-xl-2 flex-column">
             <a href="{% url 'index' %}">

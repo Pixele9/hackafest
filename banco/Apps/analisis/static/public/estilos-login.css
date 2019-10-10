@@ -2,6 +2,7 @@
     --verde:#25b500;
     --verdeDark: #389c1f;
     --gris:(#F3F3F3);
+    --verdeDark2: #204F33;
 }
 html, body{
     height: 100%;
@@ -47,7 +48,7 @@ html, body{
     height: 40px;
     border-radius: 14px;
     border: 2px var(--verde) solid;
-    outline: none,
+    outline: none;
 }
 
 .login-btn{
@@ -80,6 +81,11 @@ html, body{
     height: 100%;
 }
 
+.aside-movil{
+    background-color: var(--verde);
+    height: auto;
+}
+
 .aside-carac{
     height: 70px;
     color:white;
@@ -95,9 +101,9 @@ html, body{
 .aside-carac:hover{
     height: 80px;
     cursor:pointer;
-    background-color: white;
-    color: var(--verde);
-    box-shadow: 0px 0px 8px 1px rgba(191,189,191,.8);
+    background-color: var(--verdeDark2);
+    color: white;
+    /* box-shadow: 0px 0px 8px 1px rgba(191,189,191,.8); */
 }
 .row-content{
     height: 90%;
@@ -114,7 +120,6 @@ html, body{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border-right: 1px solid black);
 }
 
 .card{
@@ -166,4 +171,47 @@ html, body{
 /* Mi perfil estilos */
 .perfil-container{
     
+}
+
+/* Estilos Socios */
+.img-socios{
+    width: 80px;
+    height: 80px;
+}
+.input-socio{
+    height: 40px;
+    border-radius: 14px;
+    border: 2px var(--verde) solid;
+    outline: none;
+}
+
+.btn-socios{
+    color: white;
+    background-color: var(--verde);
+    border: none;
+    border-radius: 14px;
+    width: 100px;
+    height: 40px;
+}
+
+.btn-socios:hover{
+    background-color: #389c1f;
+}
+
+@media only screen and (max-width: 992px) {
+  .input-socio{
+      width: 100%;
+  }
+}
+
+.btn-editar{
+    color: white;
+    background-color: var(--verde);
+    border: none;
+    border-radius: 14px;
+    height: 40px;
+}
+
+.btn-editar:hover{
+    background-color: #389c1f;
 }
