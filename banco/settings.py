@@ -77,10 +77,13 @@ WSGI_APPLICATION = 'banco.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        
+        # MODIFICANDO LOS DATOS DE LA BASE DE DATOS A CREAR Y CONECTAR
+        # (NAME, HOST, USER, PASSWORD, PORT)
         'NAME': 'banco',
+        'HOST': '127.0.0.1',
         'USER': 'root',
         'PASSWORD': '',
-        'HOST': 'localhost',    #or an IP address that the db is hosted on
         'PORT': '3306'
     }
 }
