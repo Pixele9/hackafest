@@ -2,21 +2,25 @@
 {% load static %}
 {% block seccion %}Predicción de Socios{% endblock seccion %}
 {% block content %}
-<div class="col-8 offset-2 perfil-container">
-<div class="row flex-md-row flex-column">
+<div class="col-12 d-flex flex-row align-items-center">
+    <img class="img-socios mx-2" src="{% static 'public/img/report.png'%}" alt="">
+    <p class="m-0">¡Recuerda que para poder obtener resultados, debes asegurarte de llenar todos los campos!</p>
+</div>
+<div class="col-12 flex-column py-4">
+
     <form action="">
-        <p for="">Municipio</p>
-        <input type="text">
-        <p for="">Tipo de Préstamo</p>
-        <input type="text">
-        <p for="">Edad</p>
-        <input type="number">
-        <p for="">Género</p>
-        <select name="genero" id="genero">
+        <p class="m-0" for="">Municipio</p>
+        <input class="input-socio mb-3 px-3" type="text">
+        <p class="m-0" for="">Tipo de Préstamo</p>
+        <input class="input-socio mb-3 px-3" type="text">
+        <p class="m-0" for="">Edad</p>
+        <input class="input-socio mb-3 px-3" type="number">
+        <p class="m-0" for="">Género</p>
+        <select class="mb-3" name="genero" id="genero">
             <option value="M">Masculino</option>
             <option value="F">Femenino</option>
         </select>
-        <p for="">Ocupación</p>
+        <p class="m-0" for="">Ocupación</p>
         <select name="ocupacion" id="ocupacion">
             <option value="AMADECASA">Ama de Casa</option>
             <option value="COMPRAVENTAARTICULOSDEBONETERIA">Compra Venta de Artículos de Bonetería</option>
@@ -41,8 +45,8 @@
             <option value="GANADOVACUNODECARNE">Ganado Vacuno de Carne</option>
             <option value="GANADOVACUNODELECHE">Ganado Vacuno de Leche</option>
         </select>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Buscar">
     </form>
-</div>
+
 </div>
 {% endblock content %}
