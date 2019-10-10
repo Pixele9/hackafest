@@ -19,6 +19,10 @@ from Apps.analisis import views as viewsBanco
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index', viewsBanco.index, name="index"),
-    path('login', viewsBanco.loginn, name='login' )
+    path('index/', viewsBanco.index, name="index"),
+    path('login/', viewsBanco.loginn, name='login' ),
+    path("base/", viewsBanco.base, name="base"),
+    path('prediccion/', viewsBanco.prediccion , name='prediccion'),
+    path("socios/", viewsBanco.socios, name="socios")
+
 ]
