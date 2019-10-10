@@ -26,24 +26,28 @@ function iniciarSesion()
     let password = document.getElementById("password").value;
     let token = getCookie('csrftoken');
 
-    $.ajax({ 
-        type: 'POST',
-        url: '',
-        data: {csrfmiddlewaretoken: token, user:user, password:password},
-        success: function(data)
-        {
-            if(data==1)
+    if(user.length>0 && password.length>0)
+    {
+        $.ajax({ 
+            type: 'POST',
+            url: '',
+            data: {csrfmiddlewaretoken: token, user:user, password:password},
+            success: function(data)
             {
-                // PONER EL REDIRECCIONAMIENTO HACIA LOS PERFILES
-                // location.href = 
+                if(data==1)
+                {
+                    // PONER EL REDIRECCIONAMIENTO HACIA LOS PERFILES
+                    location.href = './index'
+                }
+                else
+                {
+                    alert("Datos incorrectos\nFavor de verificarlos");
+                }
             }
-            else
-            {
-                alert("Datos incorrectos\nFavor de verificarlos");
-            }
-        }
-     });
-
-    
-
+         });
+    }
+    else
+    {
+        alert("Favor de ingresar tus datos");
+    }
 }
