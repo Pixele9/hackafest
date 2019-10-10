@@ -8,3 +8,5 @@ banco/banco/settings.py
 banco/db.sqlite3
 
 banco/manage.py
+
+banco/settings.py
