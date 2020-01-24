@@ -37,7 +37,7 @@ function iniciarSesion()
                 if(data==1)
                 {
                     // PONER EL REDIRECCIONAMIENTO HACIA LOS PERFILES
-                    location.href = './index'
+                    location.href = '../index'
                 }
                 else
                 {
@@ -79,4 +79,27 @@ function getPrediction()
     {
         alert("Favor de ingresar tus datos");
     }
+}
+
+function perfil()
+{
+    tarjeta = document.getElementById("perfil-ideal");
+    tarjeta.style.display="inline";
+}
+
+function mensajes()
+{
+    var token = getCookie('csrftoken');
+
+    $.ajax({ 
+        type: 'POST',
+        url: '../mensaje/',
+        data: {csrfmiddlewaretoken: token},
+        success: function(data)
+        {
+            // console.log(data);
+            alert("Mensaje enviado");
+        }
+     });
+
 }

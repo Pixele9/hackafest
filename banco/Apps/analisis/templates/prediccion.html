@@ -8,20 +8,40 @@
 </div>
 <div class="col-12 flex-column py-4">
 
-    <form action="">
+    <form >
         <p class="m-0" for="">Municipio</p>
-        <input class="input-socio mb-3 px-3" type="text">
-        <p class="m-0" for="">Tipo de Préstamo</p>
-        <input class="input-socio mb-3 px-3" type="text">
+        <!-- <input class="input-socio mb-3 px-3" type="text"> -->
+        <select class="mb-3 form-control" name="municipio" id="municipio">
+            <option value="ACATIC">Acatic</option>
+            <option value="JESUS MARIA">Jesus Maria</option>
+        </select>
+
+        <p class="m-0" for="">Mes</p>
+        <select class="mb-3 form-control" name="mes" id="mes">
+                <option value="Enero">Enero</option>
+                <option value="Febrero">Febrero</option>
+                <option value="Marzo">Marzo</option>
+                <option value="Abril">Abril</option>
+                <option value="Mayo">Mayo</option>
+                <option value="Junio">Junio</option>
+                <option value="Julio">Julio</option>
+                <option value="Agosto">Agosto</option>
+                <option value="Septiembre">Septiembre</option>
+                <option value="Octubre">Octubre</option>
+                <option value="Noviembre">Noviembre</option>
+                <option value="Diciembre">Diciembre</option>
+        </select>
+        <!-- <p class="m-0" for="">Tipo de Préstamo</p>
+        <input class="input-socio mb-3 px-3" type="text"> -->
         <p class="m-0" for="">Edad</p>
-        <input class="input-socio mb-3 px-3" type="number">
+        <input class=" mb-3 px-3 form-control " type="number">
         <p class="m-0" for="">Género</p>
-        <select class="mb-3" name="genero" id="genero">
+        <select class="mb-3 form-control" name="genero" id="genero">
             <option value="M">Masculino</option>
             <option value="F">Femenino</option>
         </select>
         <p class="m-0" for="">Ocupación</p>
-        <select name="ocupacion" id="ocupacion">
+        <select name="ocupacion" id="ocupacion" class="form-control">
             <option value="AMADECASA">Ama de Casa</option>
             <option value="COMPRAVENTAARTICULOSDEBONETERIA">Compra Venta de Artículos de Bonetería</option>
             <option value="COMPRAVENTAARTICULOSDEMERCERIA ">Compra Venta de Artículos de Mercería</option>
@@ -45,8 +65,54 @@
             <option value="GANADOVACUNODECARNE">Ganado Vacuno de Carne</option>
             <option value="GANADOVACUNODELECHE">Ganado Vacuno de Leche</option>
         </select>
-        <input type="submit" value="Buscar">
+        <!-- <input type="submit" value="Buscar"> -->
     </form>
+
+    <div class="container d-flex justify-content-center mt-3">
+        <button class="btn-socios my-3 my-md-0" onclick="perfil()">Buscar</button>
+    </div>
+
+    <div id="perfil-ideal" class="col-12 col-md-6 align-items-center justify-content-center" style="margin: auto; display: none">
+            <!-- Card -->
+            <div class="card d-flex flex-column p-2 my-3">
+                <h2>Perfil ideal</h2>
+                <div class="img-card p-2">
+                    <img src="{% static 'public/img/girl.png'%}" alt="" srcset="">
+                </div>
+                <div id="carac" class="carac d-flex flex-row justify-content-center p-2" data-toggle="collapse"
+                    data-target="#perfil" aria-expanded="false" aria-controls="cred" role="button">
+                    <img src="{% static 'public/img/more.png'%}" alt="" srcset="">
+                </div>
+                <div id="perfil" class="creditos-container collapse">
+                    
+                    <div class="caracteristica">
+                        <p class="feat-title">Sexo:</p>
+                        <p>Femenino</p>
+                    </div>
+                    <div class="caracteristica">
+                        <p class="feat-title">Edad:</p>
+                        <p>26 años</p>
+                    </div>
+                    <div class="caracteristica">
+                        <p class="feat-title">Ocupación:</p>
+                        <p>Emplead(a)</p>
+                    </div>
+                    <div class="caracteristica">
+                        <p class="feat-title">Monto:</p>
+                        <p>$ 8,000</p>
+                    </div>
+                    <div class="caracteristica">
+                        <p class="feat-title">Mes de credito:</p>
+                        <p>Diciembre</p>
+                    </div>
+                    <div class="caracteristica">
+                        <p class="feat-title">Tipo de credito:</p>
+                        <p>Consumo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
 
 </div>
 {% endblock content %}

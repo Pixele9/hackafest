@@ -24,5 +24,6 @@ urlpatterns = [
     path("base/", viewsBanco.base, name="base"),
     path('prediccion/', viewsBanco.prediccion , name='prediccion'),
     path("socios/", viewsBanco.socios, name="socios"),
+    path("mensaje/", viewsBanco.mensaje, name="mensaje"),
     path('miPerfil/', viewsBanco.miPerfil, name="miPerfil")
 ]

@@ -28,10 +28,9 @@ def mensaje(request):
     to = '+527331366904'
     client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
     client.messages.create(
-        body='Hello testing twilio in Django', 
+        body='Hola, estimado socio. Cuenta con un credito preaprobado. Presentate en tu sucursal para mas informacion', 
         to=to, from_=settings.TWILIO_PHONE_NUMBER)
-
-    return HttpResponse("Hola")
+    return HttpResponse("1")
 
     
 def index(request):
